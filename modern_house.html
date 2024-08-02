@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* reset */
+        * {margin: 0;box-sizing: border-box;}
+        ul, ol, li {list-style:none; margin: 0; padding:0;}
+        a {text-decoration: none;}
+
+
+        .like {height: 25px; float: right;}
+        .sale { margin: 10px 0px; text-align: left;}
+                    .rate {font-size: 22px; color: tomato;}
+                    .price {font-size: 20px;}
+                    .origin {font-size: 15xp; color: gray;}
+
+        /* header */
+        header {width: 1200px; height: 200px; margin: 0 auto; }
+            #main {width: 1200px; height: 100px; float: left; margin: 20px 0 0px 0px;}
+                #logo {width: 200px; height: 70px; margin: 15px; float: left;}
+                #logo > img {width: 100%; margin: 15px 0;}
+                #mall {width: 150px; height: 70px;  margin: 15px; float: left;}
+                    #mall > h3 { margin: 20px 5px; color: gray; font-size: 20px;}
+                    #mall > h3 > span {color:aquamarine;}
+                #serch {width: 400px; height: 70px; margin: 15px 30px; float: left;}
+                    #serch > input {width: 400px; height: 40px; border-color: aquamarine;
+                    margin: 15px 0; }
+                #user {width: 300px; height: 70px; margin: 15px; float: right;}
+                    .user_icon {width: 65px;  height: 50px; float: left; text-align: center; margin: 0 5px 0 5px;}
+                    .user_icon > img {height: 35px; }
+                    .user_icon > span {display: block; font-size: 12px;}
+                
+
+            #category_bar {width: 1200px; height: 50px; float: left; margin: 20px 0 10px 0px;}
+                #menu { width: 150px; height: 40px;  margin: 5px 10px; float: left; position: relative;}
+                #menu > img {height: 100%; margin: 0 10px; position: absolute;}
+                #menu > p {margin: 10px 0 10px 60px; display: inline; position: absolute;}
+
+
+                #category_bar > nav {width: 650px; height: 40px; float: left; margin: 5px 0px 5px 130px ; }
+                    nav > ul >li {float: left; margin: 5px 10px; font-size: 20px;}
+                    nav > ul >li > a { color: black;}
+                    .category_point {color: aquamarine;}
+
+
+        /*content*/
+        #slider {width: auto; height: 300px; margin: 0 auto; text-align: center; }
+            #slider > img {height: 100%;}
+
+        #category_img {width: 1200px; height: 200px; margin: 50px auto; }
+            article {width: 100px; height: 150px;  float: left; margin: 30px 10px 10px 10px; text-align: center;}
+            .category_icon > img {width: 100px; height: auto;}
+            
+
+
+        #bener_mini {width: 1200px; height: 230px; margin: 0 auto; }
+            .mini_bener {width: 570px; height: 210px; float: left; margin: 10px 15px; }
+            .mini_bener > img { height:100%; border-radius: 20px; }
+
+
+        #best {width: 1200px; height: 500px; margin: 100px auto; }
+            #best_text {width: 1200px; height: 70px;text-align:center; margin: 30px 0px 0px 0px;}
+                #best_text > span { font-size: 35px;} 
+
+            #best_cate {width: 1200px; height: 50px;  margin: 0 25px; text-align: center;}
+                .btn1 {border-radius: 20px; height: 40px; width: 100px; background-color: rgb(214, 214, 214);
+                    font-size: 15px; border: none;}
+
+            .best_img_icon {width: 220px; height: 330px; margin: 20px 10px 0px 10px;}
+                .best_img_icon > img {width: 100%; height: auto; border-radius: 100%;}
+                .best_img_icon > p {font-size: 14px; margin: 10px 0 0 0; }
+
+ 
+
+    
+
+
+
+        #pick {width: 100%; height: 600px; background-color:lightgrey;
+            margin: 0 auto; }           
+            
+        #pick_text {height: 130px; width: 1200px; position: relative; margin: 0 auto; }
+            #pick_text> p {width: 400px; display: inline; font-size: 35px; position: absolute;
+            margin: 40px 400px;}
+            
+        #pick_num {height: 400px; width: 1200px; margin: 20px auto;}
+        .pick_1 {background-color: white; height: 370px; width: 280px; float: left;
+        margin: 10px; border-radius: 15px; padding: 5px;}
+        .pick_img {width: 100%; border-top-left-radius: 15px; border-top-right-radius: 15px; margin-bottom: 10px;}
+
+
+
+
+
+        #new {width: 100%; height: 700px; background-color: rgb(7, 160, 160);
+        margin: 0 auto; }
+        
+        #new_text { width: 1200px; height: 150px; margin: 0 auto; position: relative;}
+        #new_text > span { font-size: 35px; position: absolute; margin: 80px 0px 0px 450px; color: white;}
+        #new_text > a { float: right; font-size: 17px; position: absolute; margin: 100px 0px 0px 900px; color: white;}
+    
+        
+        #new_img {width: 860px; height: 300px; margin: 50px auto;}
+        
+        
+    
+        .than {width: 70px; height: 70px; float: left; margin: 110px 30px;}
+        .than > img {width: 100%; height: 100%;}
+
+
+        #new_main {width: 600px; height: 300px; float: left; background-color: white;
+        margin: 0px 0px 0px 00px; border-radius: 20px; }
+
+            #new_img_imgbox { height: 280px; width: 280px; margin: 10px;float: left;}
+                #new_img_imgbox > img {height: 100%; width: 100%;border-radius: 20px;}
+            #new_img_textbox { height: 200px;  width: 300px ;float: left;
+                margin: 50px 0;}
+
+                .new_img_textbox_1 {font-size: 12px; color: gray;}
+                .new_img_textbox_3 {font-size: 18px; color: gray;}
+
+        /* #modern_pick {width: 100%; height: 600px; background-color: rgb(39, 39, 95);
+            margin: 0 auto; } */
+
+
+
+
+        /* footer */
+        footer {width: 1200px; height: 200px;  margin: 0 auto; }
+
+        #footer1 {width: 20%; height: 150px; float: left;}
+            #logo_footer { width : 200px; height: 30px; margin: 20px 0; }
+            #logo_footer > img {width:100%}
+
+            #icon_footer {width : 200px; height: 30px;}
+            #icon_footer > img {height:100%; margin-right: 5px; }
+
+
+        #footer2 {width: 60%; height: 150px; float: left;}
+                #footer2_1 { width: 650px; height: 30px; ; margin: 10px 0;}
+                #footer2_1 > ul >li {float: left; margin: 0 8px;}
+                #footer2_1 > ul >li >a {color: gray;}
+
+                #footer2_2 { width: 650px; height: 30px; ; margin: 10px 0; font-size: 11px; color: gray;}
+
+                #footer2_3 { width: 650px; height: 30px; ; margin: 10px 0; font-size: 13px; color: gray;}
+
+                #footer2_4 { width: 650px; height: 15px; ; margin: 10px 0; font-size: 11px; color: gray;}
+
+            #footer3 {width: 20%; height: 150px; float: left;}
+            .footer_div {margin: 10px 0; }
+            .footer3_1 {color: gray}
+            .footer3_2 {font-size: 12px; color: gray}
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div id="main">
+            <div id="logo">
+                <img src="img\modern house\logo.png" alt="main logo">
+            </div>
+            <div id="mall">
+                <h3><span>모던몰</span>|버터샵</h3>
+            </div>
+            <div id="serch">
+                <input type="text" name="serch">
+            </div>
+            <div id="user">
+                <div class="user_icon">
+                    <img src="img\modern house\user_login.png" alt="login">
+                    <span>로그인</span>
+                </div>
+                <div class="user_icon">
+                    <img src="img\modern house\user_join.png" alt="join">
+                    <span>회원가입</span>
+                </div>
+                <div class="user_icon">
+                    <img src="img\modern house\user_cart.png" alt="cart">
+                    <span>장바구니</span>
+                </div>
+                <div class="user_icon">
+                    <img src="img\modern house\user_call.png" alt="call">
+                    <span>고객센터</span>
+                </div>
+            </div>
+        </div>
+        <div id="category_bar">
+            <div id ="menu" >
+                <img src="img\modern house\catogory_icon.png" alt="catogory">
+                <p>카테고리</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#"  class="category_point">#썸머 핫딜</a></li>
+                    <li><a href="#">베스트</a></li>
+                    <li><a href="#">신상품</a></li>
+                    <li><a href="#">SALE</a></li>
+                    <li><a href="#">쿠폰/혜택</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">REVIWE</a></li>
+                </ul>
+                
+            </nav>
+        </div>
+    </header>
+    <div id="slider">
+        <img src="img\modern house\bener.gif" alt="bener">
+    </div>
+
+
+
+    <div id="category_img">
+        <article class = "category_icon">
+            <img src="img\modern house\category_icon1.png" alt="카테고리_아이콘1">
+            <span>주방</span>
+        </article>
+        <article class = "category_icon">
+            <img src="img\modern house\category_icon2.png" alt="카테고리_아이콘2">
+            <span>패브릭</span>
+        </article>
+        <article class = "category_icon">
+            <img src="img\modern house\category_icon3.png" alt="카테고리_아이콘3">
+            <span>가구</span>
+        </article>
+        <article class = "category_icon">
+            <img src="img\modern house\category_icon4.png" alt="카테고리_아이콘4">
+            <span>키즈</span>
+        </article>
+        <article class = "category_icon">
+            <img src="img\modern house\category_icon5.png" alt="카테고리_아이콘5">
+            <span>린넨앤키친</span>
+        </article>
+        <article class = "category_icon">
+            <img src="img\modern house\category_icon6.png" alt="카테고리_아이콘6">
+            <span>욕실/생활</span>
+        </article>
+        <article class = "category_icon">
+            <img src="img\modern house\category_icon7.png" alt="카테고리_아이콘7">
+            <span>홈데코</span>
+        </article>
+        <article class = "category_icon">
+            <img src="img\modern house\category_icon8.png" alt="카테고리_아이콘8">
+            <span>수납/정리</span>
+        </article>
+        <article class = "category_icon">
+            <img src="img\modern house\category_icon9.png" alt="카테고리_아이콘9">
+            <span>가전/라이프</span>
+        </article>
+        <article class = "category_icon">
+            <img src="img\modern house\category_icon10.png" alt="카테고리_아이콘10">
+            <span>펫본</span>
+        </article>        
+    </div>
+
+
+
+    <div id="bener_mini">
+        <div class="mini_bener">
+            <img src="img/modern house/mini_bener1.jpg" alt="mini_bener1">
+        </div>
+        <div class="mini_bener">
+            <img src="img/modern house/mini_bener2.jpg" alt="mini_bener2">
+        </div>
+    </div>
+
+
+
+    <div id="best">
+        <div id ="best_text"><span>지금 뜨고있는 베스트</span></div>
+        <div id ="best_cate">
+            <button type="button" class="btn1">전체</button>
+            <button type="button" class="btn1">주방</button>
+            <button type="button" class="btn1">패브릭</button>
+            <button type="button" class="btn1">가구</button>
+            <button type="button" class="btn1">키즈</button>
+            <button type="button" class="btn1">린넨앤키친</button>
+            <button type="button" class="btn1">욕실/생활</button>
+            <button type="button" class="btn1">홈데코</button>
+            <button type="button" class="btn1">수납정리</button>
+        </div>
+        <div id="best_img">
+            <article class ="best_img_icon">
+                <img src="img/modern house/best_img1.jpg" alt="best_img_icon1">
+                <p>ON 피그먼트 패드겸이불 아이보리</p>
+                <div class="sale">
+                    <span class="rate">40%</span><span class="price">29,900원</span><span class="origin"><del>44,900원</del></span>
+                    <img class="like" src ="img/modern house/like.png" alt="like">
+                </div>
+            </article>
+            <article class ="best_img_icon">
+                <img src="img/modern house/best_img2.jpg" alt="best_img_icon2">
+                <p>ON 스마일 멜라민 접시 4p세트</p>
+                <div class="sale">
+                    <span class="rate">37%</span><span class="price">9,900원</span><span class="origin"><del>15,900원</del></span>
+                    <img class="like" src ="img/modern house/like.png" alt="like">
+                </div>
+            </article>
+            <article class ="best_img_icon">
+                <img src="img/modern house/best_img3.jpg" alt="best_img_icon3">
+                <p>WOW 오풀로 카페테이블 2인 세트</p>
+                <div class="sale">
+                    <span class="rate">32%</span><span class="price">79,900원</span><span class="origin"><del>117,700원</del></span>
+                    <img class="like" src ="img/modern house/like.png" alt="like">
+                </div>
+                
+            </article>
+            <article class ="best_img_icon">
+                <img src="img/modern house/best_img4.jpg" alt="best_img_icon4">
+                <p>키즈 꿈꾸는 치타 폴딩우산의자</p>
+                <div class="sale">
+                    <span class="rate">58%</span><span class="price">15,900원</span><span class="origin"><del>37,900원</del></span>
+                    <img class="like" src ="img/modern house/like.png" alt="like">
+                </div>
+            </article>
+            <article class ="best_img_icon">
+                <img src="img/modern house/best_img5.jpg" alt="best_img_icon5">
+                <p>헤이 데일리 세면타올7P 180g</p>
+                <div class="sale">
+                    <span class="rate"></span><span class="price">29,900원</span><span class="origin"><del></del></span>
+                    <img class="like" src ="img/modern house/like.png" alt="like">
+                </div>
+            </article>
+        </div>
+    </div>
+
+
+
+    <div id="pick">
+        <div id="pick_text"><p>고객님을 위한 맞춤 PICK!</p></div>
+        <div id="pick_num">
+            <div class="pick_1">
+                <img src="img\modern house\pick_img1.jpg" class="pick_img">
+                <p>ON 젤라또 차렵이불</p>
+                <div class="sale">
+                    <span class="rate">65%%</span><span class="price">27,900원</span><span class="origin"><del>79,900원</del></span>
+                    <img class="like" src ="img/modern house/like.png" alt="like">
+                </div>
+            </div>
+            <div class="pick_1">
+                <img src="img\modern house\pick_img2.jpg" class="pick_img">
+                <p>ON 젤라또 고정밴드가 있는 패드</p>
+                <div class="sale">
+                    <span class="rate">70%%</span><span class="price">17,900원</span><span class="origin"><del>59,900원</del></span>
+                    <img class="like" src ="img/modern house/like.png" alt="like">
+                </div>
+            </div>
+            <div class="pick_1">
+                <img src="img\modern house\pick_img3.jpg" class="pick_img">
+                <p>마이래빗 도자기 공기대접머그 3P</p>
+                <div class="sale">
+                    <span class="rate">37%%</span><span class="price">9,900원</span><span class="origin"><del>15,900원</del></span>
+                    <img class="like" src ="img/modern house/like.png" alt="like">
+                </div>
+            </div>
+            <div class="pick_1">
+                <img src="img\modern house\pick_img4.jpg" class="pick_img">
+                <p>ON 피그먼트 패드겸 이불 아이보리</p>
+                <div class="sale">
+                    <span class="rate">40%</span><span class="price">29,900원</span><span class="origin"><del>44,900원</del></span>
+                    <img class="like" src ="img/modern house/like.png" alt="like">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <div id="new">
+        <div id="new_text">
+            <span>따끈따끈한 신상품</span>
+            <a href="#">전체보기 ></a>
+        </div>
+        
+        <div id ="new_img">
+            <div class="than"><img src="img\modern house\back_icon.png" alt="back_icon"></div>
+            <div id="new_main">
+                <div id="new_img_imgbox">
+                    <img src="img\modern house\new.jpg">
+                </div>
+                <div id="new_img_textbox">
+                    <p class="new_img_textbox_1">패브릭</p>
+                    <h3 class="new_img_textbox_2">소프트브리즈 얇은 이불</h3>
+                    <br>
+                    <p class="new_img_textbox_3">온몸을 감싸는 포근함!</p>
+                    <p class="new_img_textbox_3">부드러움을 극대화한 피치스킨</p>
+                    <p class="new_img_textbox_3">가공을 한 얇은 차렵이불</p>
+                </div>                
+            </div>
+            <div class="than"><img src="img\modern house\next_icon.png" alt="next_icon"></div>
+        </div>
+        
+
+
+    </div>
+
+
+
+    <!-- <div id="modern_pick">
+        <div id="modern_pick_text"></div>
+    </div> -->
+
+
+
+    <hr>
+    <footer>
+        <div id="footer1">
+            <div id="logo_footer">
+                <img src="img\modern house\logo_foot.png" alt="logo_footer">
+            </div>
+            <div id="icon_footer">
+                <img src="img\modern house\footer_sns01.png" alt="footer_sns01">
+                <img src="img\modern house\footer_sns03.png" alt="footer_sns03">
+                <img src="img\modern house\footer_sns04.png" alt="footer_sns04">
+                <img src="img\modern house\footer_sns05.png" alt="footer_sns05">
+            </div>
+        </div>
+        <div id="footer2">
+            <div id="footer2_1">
+                <ul>
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">IR</a></li>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">1:1</a></li>
+                    <li><a href="#">대량/제휴문의</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">정보처리방침</a></li>
+                    
+                </ul>
+            </div>
+            <div id="footer2_2">
+                <p>주소 : 서울특별시 구로구 경인로 662 (디큐브시티) 14층l | 회사명 : MH&CO | 대표이사 : 오상흔 | 사업자등록번호 : 821-87-00617</p>
+                <p>통신판매업번호 : 2017-서울구로-1368l |  개인정보책임자 : 이효영</p>
+            </div>
+            <div id="footer2_3">
+                <p>고객님은 안전거래를 위해 결제 시 저희 사이트에서 가입한 구매안전 서비스를 이용하실 수 있습니다.</p>
+                <p>KCP 가입 확인</p>
+            </div>
+            <div id="footer2_4">
+                <p>copyright. 2020. modernhousemall.com. All rights reserved.</p>
+            </div>
+                
+            
+
+        </div>
+        <div id="footer3">
+            <div class="footer_div">
+                <p class="footer3_1">고객문의 대표전화</p>
+                <h2 class="footer3_1">1899-0811</h2>
+                <p class="footer3_2">AM 09:00 ~ PM 06:00</p>
+                <p class="footer3_2">(주말 · 공휴일 휴무)</p>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <br><br><br><br><br><br><br><br><br><br><br>
+
+
+</body>
+</html>
